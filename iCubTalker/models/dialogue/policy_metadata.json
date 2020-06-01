@@ -1,0 +1,50 @@
+{
+  "action_fingerprints": {
+    "action_listen": {
+      "slots": []
+    },
+    "krok": {
+      "slots": []
+    },
+    "preucenie": {
+      "slots": []
+    },
+    "pozdrav": {
+      "slots": []
+    },
+    "pohyb_rukami": {
+      "slots": []
+    },
+    "pohyb_hlavou": {
+      "slots": []
+    },
+    "pohyb_telom": {
+      "slots": []
+    },
+    "povedz": {
+      "slots": []
+    },
+    "mimika": {
+      "slots": []
+    },
+    "komplexny_pohyb": {
+      "slots": []
+    },
+    "pohyb_nohami": {
+      "slots": []
+    }
+  },
+  "rasa_core": "0.11.1",
+  "python": "3.6.8",
+  "max_histories": [
+    null,
+    3,
+    3
+  ],
+  "ensemble_name": "rasa_core.policies.ensemble.SimplePolicyEnsemble",
+  "policy_names": [
+    "rasa_core.policies.fallback.FallbackPolicy",
+    "rasa_core.policies.memoization.MemoizationPolicy",
+    "rasa_core.policies.keras_policy.KerasPolicy"
+  ]
+}

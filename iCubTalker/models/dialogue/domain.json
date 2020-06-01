@@ -1,0 +1,27 @@
+{
+  "states": [
+    "intent_komplexny_pohyb",
+    "intent_krok",
+    "intent_mimika",
+    "intent_pohyb_hlavou",
+    "intent_pohyb_nohami",
+    "intent_pohyb_rukami",
+    "intent_pohyb_telom",
+    "intent_povedz",
+    "intent_pozdrav",
+    "intent_preucenie",
+    "prev_action_listen",
+    "prev_action_restart",
+    "prev_action_default_fallback",
+    "prev_pozdrav",
+    "prev_mimika",
+    "prev_pohyb_rukami",
+    "prev_pohyb_hlavou",
+    "prev_pohyb_telom",
+    "prev_pohyb_nohami",
+    "prev_komplexny_pohyb",
+    "prev_krok",
+    "prev_preucenie",
+    "prev_povedz"
+  ]
+}

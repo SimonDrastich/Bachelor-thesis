@@ -1,0 +1,2 @@
+model_checkpoint_path: "C:\\Users\\Arliasis\\Desktop\\Bakalarka\\iCubTalker\\chatbot\\../models/nlu\\default\\iCubbot\\intent_classifier_tensorflow_embedding.ckpt"
+all_model_checkpoint_paths: "C:\\Users\\Arliasis\\Desktop\\Bakalarka\\iCubTalker\\chatbot\\../models/nlu\\default\\iCubbot\\intent_classifier_tensorflow_embedding.ckpt"

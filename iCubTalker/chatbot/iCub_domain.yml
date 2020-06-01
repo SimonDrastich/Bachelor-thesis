@@ -1,0 +1,57 @@
+intents:
+ - pozdrav
+ - mimika
+ - pohyb_hlavou
+ - pohyb_telom
+ - pohyb_nohami
+ - pohyb_rukami
+ - komplexny_pohyb
+ - krok
+ - preucenie
+ - povedz
+
+templates:
+ utter_stretnutie:
+   - "Ahoj, ako sa máš?"
+   - "Ahoj, ja som iCub"
+   - "Zdravím"
+   - "Dobrý deň"
+
+ utter_rozlucenie:
+   - "Dovidenia, nabudúce"
+   - "Maj sa"
+   - "Do skorého videnia"
+
+
+ utter_preucenie:
+   - "Dobre, daj mi prosím chvíľu aby som sa to naučil"
+   - "Malý moment, naučím sa to a nanovo načítam svoju neurónovú sieť"
+
+ utter_pozdrav_slnku:
+   - "Nechceš sa natiahnúť tiež?"
+
+ utter_krok:
+   - "Dobre zapíšem si ho"
+   - "Mám to, môžeme pokračovať v tréningu"
+   - "Zapamätané, môžeš ma naučiť ďalší krok"
+
+ utter_komplexny_pohyb:
+   - "Prepáč takýto komplexný pohyb neviem"
+   - "Takýto komplexný pohyb zatiaľ nepoznám"
+
+ utter_limit:
+   - "To je nad moju flexibilitu"	
+   - "Prepáč ale to je viac ako mi moje telo umožňuje"
+   - "Pohol som sa tak ako mi to moje telo dovoľuje"
+
+actions:
+ - pozdrav
+ - mimika
+ - pohyb_rukami
+ - pohyb_hlavou
+ - pohyb_telom
+ - pohyb_nohami
+ - komplexny_pohyb
+ - krok
+ - preucenie
+ - povedz 

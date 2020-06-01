@@ -1,0 +1,64 @@
+%YAML 1.1
+---
+actions:
+- pozdrav
+- mimika
+- pohyb_rukami
+- pohyb_hlavou
+- pohyb_telom
+- pohyb_nohami
+- komplexny_pohyb
+- krok
+- preucenie
+- povedz
+config:
+  store_entities_as_slots: true
+entities: []
+intents:
+- pozdrav:
+    use_entities: true
+- mimika:
+    use_entities: true
+- pohyb_hlavou:
+    use_entities: true
+- pohyb_telom:
+    use_entities: true
+- pohyb_nohami:
+    use_entities: true
+- pohyb_rukami:
+    use_entities: true
+- komplexny_pohyb:
+    use_entities: true
+- krok:
+    use_entities: true
+- preucenie:
+    use_entities: true
+- povedz:
+    use_entities: true
+slots: {}
+templates:
+  utter_komplexny_pohyb:
+  - text: Prepáč takýto komplexný pohyb neviem
+  - text: Takýto komplexný pohyb zatiaľ nepoznám
+  utter_krok:
+  - text: Dobre zapíšem si ho
+  - text: Mám to, môžeme pokračovať v tréningu
+  - text: Zapamätané, môžeš ma naučiť ďalší krok
+  utter_limit:
+  - text: To je nad moju flexibilitu
+  - text: Prepáč ale to je viac ako mi moje telo umožňuje
+  - text: Pohol som sa tak ako mi to moje telo dovoľuje
+  utter_pozdrav_slnku:
+  - text: Nechceš sa natiahnúť tiež?
+  utter_preucenie:
+  - text: Dobre, daj mi prosím chvíľu aby som sa to naučil
+  - text: Malý moment, naučím sa to a nanovo načítam svoju neurónovú sieť
+  utter_rozlucenie:
+  - text: Dovidenia, nabudúce
+  - text: Maj sa
+  - text: Do skorého videnia
+  utter_stretnutie:
+  - text: Ahoj, ako sa máš?
+  - text: Ahoj, ja som iCub
+  - text: Zdravím
+  - text: Dobrý deň

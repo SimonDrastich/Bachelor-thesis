@@ -1,0 +1,77 @@
+yarp: Port /simFaceExp active at tcp://192.168.56.1:10077/
+yarp: Port /icubSim/face/raw/in active at tcp://192.168.56.1:10078/
+yarp: Port /face/image/out active at tcp://192.168.56.1:10079/
+yarp: Port /face/eyelids active at tcp://192.168.56.1:10080/
+
+yarp: Port /emotion/in active at tcp://192.168.56.1:10056/
+yarp: Port /emotion/out active at tcp://192.168.56.1:10057/
+yarp: Sending output from /emotion/out to /icubSim/face/raw/in using tcp
+
+FACE EXPRESSIONS:
+
+Face expressions can now be used with the simulator.
+
+There are two ways of running the face expressions on the simulator. One is sending raw commands directly to the faceExpression module or using the emotionInterface (a more human readable way) that is currently being used by the real robot.
+Emotion Interface:
+
+Run the
+
+    simulator,
+    simFaceExpressions
+    emotionInterface
+
+Connect to the following ports: (or use the script in the $ICUB_ROOT/app/simFaceExpression/scripts )
+
+yarp connect /face/eyelids /icubSim/face/eyelids
+yarp connect /face/image/out /icubSim/texture/face
+yarp connect /emotion/out /icubSim/face/raw/in
+
+Open writer so you can set face expressions in the simulator
+
+yarp write /writer /emotion/in
+
+Face expressions are set by sending high level commands:
+
+       set mou <cmd>   -  set an expression in the mouth subsystem
+       set eli <cmd>   -  set an expression in the eye-lids subsystem
+       set leb <cmd>   -  set an expression in the left eyebrow subsystem
+       set reb <cmd>   -  set an expression in the right eyebrow subsystem
+       set all <cmd>   -  set an expression in the whole system
+
+The several <cmd> are described in file emotions.ini. You can also define your own. Here are the default ones:
+
+  neu (neutral)
+  hap (happy)
+  sad (sad)
+  sur (surprised)
+  ang (angry)
+  evi (evil)
+  shy (shy)
+  cun (cunning)
+
+raw commands:
+
+Run the simulator and connect these ports: (or use the script in the $ICUB_ROOT/app/simFaceExpression/scripts 
+without running emotionInterface)
+
+yarp connect /face/eyelids /icubSim/face/eyelids 
+yarp connect /face/image/out /icubSim/texture/face
+
+Open writer so you can set face expressions in the simulator
+
+yarp write /writer /icubSim/face/raw/in
+
+Face expressions are set by changing hexadecimal values of the following subsystems:
+
+left eyebrow (from L00 to L08)
+right eyebrow (from R00 to R08)
+mouth (from M00 to M3F)
+eyelids (from S24(closed) to S48(opened))
+
+The above commands in the brackets will set iCub's mood to sort of happy. Only one command is send at a time. 
+The first letter in the command specifies the subsystem and the rest is hexadecimal number, which is then 
+decoded to 8 bits binary number. For example L followed by 02 sends this binary number (0000 0010) to the 
+left eyebrow subsystem, which activates 2nd port. In similar way, L followed by 04 would activated 3rd port 
+of the left eyebrow subsystem as the binary number for hex 02 is (0000 0100). 
+
+http://wiki.icub.org/wiki/Simulator_README#Emotion_Interface:
